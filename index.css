@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@500&family=Poppins&display=swap');
 
+
+/*CSS RESET*/
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	/*
-		overflow-x - hidden
+	overflow-x - hidden
 	The content is clipped - and no scrolling mechanism is provided*/
 	overflow-x: hidden ;
 	font-family: 'Lato', sans-serif;
@@ -16,6 +18,7 @@
 html{
 	scroll-behavior: smooth;
 }
+
 
 .navbar{
 	text-transform: uppercase;
@@ -26,10 +29,22 @@ html{
 	padding: 20px 0;
 }
 
+
+/*combination selectors*/
+/*these selectors require two or more selectors but the target is the latter/last selector*/
+
 .navbar-dark .navbar-nav .nav-link{
 	color: white;
 	padding-left: 20px ;
 }
+
+
+
+
+
+/*pseudo element/selector*/
+/*this .nav-link : hover will change the element style once the cursor is hovered over it*/
+/*The :active selector styles the active link.*/
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover{
 	color: #1ebba3;
@@ -68,93 +83,83 @@ html{
 	animation-delay: 1.5s;
 }
 
-/*ABOUT ME START*/
 
-#about .btn{
-	border: 2px solid transparent;
-	width: 40%;
-	padding: 15px 22px;
-	background: black;
-	border-radius: 5px;
-	margin-top: 10px;
+
+
+
+
+/*ABOUT ME*/
+
+#about{
+	min-height: 100%;
 }
 
-#about .btn a{
+
+/*ABOUT ME END*/
+
+
+
+
+
+
+/*SKILLS START*/
+
+#service{
+	min-height: 100%;
+}
+
+
+#service a{
 	color: white;
 	text-decoration: none;
 	font-size: 1em;
-	font-weight: bold;
-	text-transform: uppercase;
 }
 
-#about .btn:hover{
-	border:  2px solid black;
+#service a:hover{
+	color: #1ebba3;
 	cursor: pointer;
 }
 
-/*SERVICES START*/
-
-#service .button{
-	border: 2px solid transparent;
-	width: 40%;
-	padding: 15px 22px;
-	background: black;
-	border-radius: 5px;
-	margin-top: 10px;
-}
-
-#service .button a{
-	color: white;
-	text-decoration: none;
-	font-size: 1em;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-#service .button:hover{
-	border:  2px solid black;
-	cursor: pointer;
-}
 
 
 @media	screen	and (max-width: 768px){
 	/*tablets screen size*/
 	
 	.navbar{
-	letter-spacing: 0.1em;
-	padding: 10px 0;
-			}	
-			.heading-content h5{
-				font-size: 3em;
-				
-			}
+		letter-spacing: 0.1em;
+		padding: 10px 0;
+	}	
+	.heading-content h5{
+		font-size: 3em;
+		
+	}
 
-			.heading-content h1{
-				font-size: 3em;
-			}
+	.heading-content h1{
+		font-size: 3em;
+	}
 
-			.heading-content p{
-				font-size: 0.9em;
-			}
+	.heading-content p{
+		font-size: 0.9em;
+	}
 }
 
 @media	screen	and (max-width: 425px){
-	 /*smartphones screen*/
-			.heading-content{	
-			top: 10%;
-			}
-				.heading-content h5{
-					font-size: 1.5em;
-					
-				}
+	/*smartphones screen*/
+	.heading-content{	
+		top: 10%;
+	}
+	.heading-content h5{
+		font-size: 1.5em;
+		
+	}
 
-				.heading-content h1{
-					font-size: 1.5em;
-				}
+	.heading-content h1{
+		font-size: 1.5em;
+	}
 
-				.heading-content p{
-					font-size: 0.6em;
-				}
+	.heading-content p{
+		font-size: 0.6em;
+	}
 }
 
 
@@ -163,3 +168,10 @@ html{
 #contact .post-heading h3{
 	font-size: 2.9em;
 }
+
+.b-tact button:hover{
+	color: #1ebba3;
+	cursor: pointer;
+}
+
+/*Contact End*/
