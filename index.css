@@ -1,63 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@500&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Lato:wght@300;400&family=Montserrat:wght@500&family=Poppins&display=swap');
 
 
 /*CSS RESET*/
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	/*
 	overflow-x - hidden
 	The content is clipped - and no scrolling mechanism is provided*/
-	overflow-x: hidden ;
-	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+	font-family: 'Cormorant Garamond', serif;
 }
 
-html{
+html {
 	scroll-behavior: smooth;
 }
 
 
-.navbar{
+body{
+			background-image: url("images/back2.jpg");
+			
+				/* Set a specific height */
+				min-height: 500px;
+			
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+}
+
+.background img{
+	opacity: 0%;
+}
+
+
+.navbar {
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 0.2em;
 	background: rgba(0, 0, 0, 0.6) !important;
-	padding: 20px 0;
+	padding: 10px 0;
+	
 }
 
 
 /*combination selectors*/
 /*these selectors require two or more selectors but the target is the latter/last selector*/
 
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link {
 	color: white;
-	padding-left: 20px ;
+	padding-left: 20px;
 }
-
-
-
 
 
 /*pseudo element/selector*/
 /*this .nav-link : hover will change the element style once the cursor is hovered over it*/
 /*The :active selector styles the active link.*/
 .navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link:hover{
+.navbar-dark .navbar-nav .nav-link:hover {
 	color: #1ebba3;
 }
 
-.heading-content{
+.heading-content {
 	position: absolute;
 	top: 40%;
 	width: 100%;
 	max-width: 100%;
 }
 
-.heading-content h5{
+.heading-content h5 {
 	font-size: 3em;
 	font-weight: 300;
 	color: white;
@@ -65,7 +81,7 @@ html{
 	animation-delay: 0.5s;
 }
 
-.heading-content h1{
+.heading-content h1 {
 	font-size: 5em;
 	color: lightgoldenrodyellow;
 	font-weight: bolder;
@@ -73,27 +89,42 @@ html{
 	animation-delay: .75s;
 }
 
-.heading-content p{
+.heading-content p {
 	font-size: 1.5em;
 	/*text-transform:uppercase ;*/
 	font-weight: lighter;
 	font-family: 'Montserrat', sans-serif;
 	word-spacing: 5px;
-	letter-spacing: 2px ;
+	letter-spacing: 2px;
 	animation-delay: 1.5s;
 }
 
-
-
-
-
-
+.display-4{
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #B2CEDE;
+	display: inline;
+	text-transform: uppercase;
+}
 /*ABOUT ME*/
 
-#about{
+#about {
 	min-height: 100%;
+	padding-top: 50px;
 }
 
+.myself_image{
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.myself_image h2{
+	font-size: 40px;
+	color: #B2CEDE;
+}
+
+.myself_image p{
+	font-size: 25px;
+	color: #B2CEDE;
+}
 
 /*ABOUT ME END*/
 
@@ -101,63 +132,71 @@ html{
 
 
 
-
 /*SKILLS START*/
 
-#service{
+#service {
 	min-height: 100%;
+	padding-top: 50px;
 }
 
 
-#service a{
+#service a {
 	color: white;
 	text-decoration: none;
 	font-size: 1em;
 }
 
-#service a:hover{
+#service a:hover {
 	color: #1ebba3;
 	cursor: pointer;
 }
 
+.card{
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #B2CEDE;
+}
 
 
-@media	screen	and (max-width: 768px){
+
+@media	screen	and (max-width: 768px) {
 	/*tablets screen size*/
-	
-	.navbar{
+
+	.navbar {
 		letter-spacing: 0.1em;
 		padding: 10px 0;
-	}	
-	.heading-content h5{
-		font-size: 3em;
-		
 	}
 
-	.heading-content h1{
+	.heading-content h5 {
+		font-size: 3em;
+
+	}
+
+	.heading-content h1 {
 		font-size: 3em;
 	}
 
-	.heading-content p{
+	.heading-content p {
 		font-size: 0.9em;
 	}
 }
 
-@media	screen	and (max-width: 425px){
+@media	screen	and (max-width: 425px) {
+
 	/*smartphones screen*/
-	.heading-content{	
+	.heading-content {
 		top: 10%;
 	}
-	.heading-content h5{
+
+	.heading-content h5 {
 		font-size: 1.5em;
-		
+
 	}
 
-	.heading-content h1{
+	.heading-content h1 {
 		font-size: 1.5em;
 	}
 
-	.heading-content p{
+	.heading-content p {
 		font-size: 0.6em;
 	}
 }
@@ -165,13 +204,32 @@ html{
 
 /*Contact Start*/
 
-#contact .post-heading h3{
-	font-size: 2.9em;
+#contact {
+	min-height: 100%;
+	padding-top: 50px;
 }
 
-.b-tact button:hover{
+/*#contact .post-heading h3 {
+	font-size: 2.1em;
+}
+*/
+.b-tact button:hover {
 	color: #1ebba3;
 	cursor: pointer;
 }
 
+
+.form-group{
+	color: #B2CEDE;
+}
+
+.my_contact{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 /*Contact End*/
+
+
+footer{
+	background-color: rgba(0, 0, 0, 0.2);
+}
