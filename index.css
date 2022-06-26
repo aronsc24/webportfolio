@@ -111,6 +111,10 @@ body{
 	min-height: 100%;
 	padding-top: 50px;
 }
+.grad_pic{
+	border: 2px solid #B2CEDE;
+}
+
 
 .myself_image{
 	background-color: rgba(0, 0, 0, 0.7);
