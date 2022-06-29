@@ -68,7 +68,7 @@ body{
 
 .heading-content {
 	position: absolute;
-	top: 40%;
+	top: 30vh;
 	width: 100%;
 	max-width: 100%;
 }
@@ -184,24 +184,25 @@ body{
 	}
 }
 
-@media	screen	and (max-width: 425px) {
+@media	screen	and (max-width: 600px) {
 
 	/*smartphones screen*/
 	.heading-content {
-		top: 10%;
+		top: 15vh;
+		width: 100%;
 	}
 
 	.heading-content h5 {
-		font-size: 1.5em;
+		font-size: 1.7em;
 
 	}
 
 	.heading-content h1 {
-		font-size: 1.5em;
+		font-size: 1.52em;
 	}
 
 	.heading-content p {
-		font-size: 0.6em;
+		font-size: 0.7em;
 	}
 }
 
